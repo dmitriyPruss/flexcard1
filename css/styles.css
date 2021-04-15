@@ -2,40 +2,35 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-:root{
-  --back-color: linear-gradient(to right, rgb(48, 39, 39), rgb(187, 31, 31), rgb(238, 82, 82), rgb(224, 131, 131), rgb(228, 151, 151), rgb(224, 131, 131), rgb(238, 82, 82), rgb(187, 31, 31), rgb(48, 39, 39));
   font-size: 16px;
 }
-
 body {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   background-image: url(./../imgs/back.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
-
 .cardContainer {
+  width: 400px;
+  height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  min-width: 300px;
+  min-width: 350px;
 }
 
+/* head */
 .head {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   background: linear-gradient(to right, rgb(238, 82, 82), rgb(224, 131, 131), rgb(228, 151, 151), rgb(224, 131, 131), rgb(238, 82, 82));
-
   position: relative;
   top: 100px;
-  z-index: 3;
 }
 .headBack {
   width: 95%;
@@ -44,22 +39,21 @@ body {
   position: absolute;
   top: 5%;
   left: 5%;
-  z-index: 2;
 }
 .headBack > img {
+  object-fit: cover;
   width: inherit;
   height: inherit;
   border-radius: 50%;
   border: 2px solid black;
 }
 
-
+/* main */
 .main {
-  background: var(--back-color);
-  width: 500px;
+  background: linear-gradient(to right, rgb(48, 39, 39), rgb(187, 31, 31), rgb(238, 82, 82), rgb(224, 131, 131), rgb(228, 151, 151), rgb(224, 131, 131), rgb(238, 82, 82), rgb(187, 31, 31), rgb(48, 39, 39));
+  width: inherit;
   height: 550px;
   border-radius: 10px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -67,11 +61,10 @@ body {
 }
 .main > h1 {
   margin-top: 100px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', "Geneva", Verdana, sans-serif;
   font-size: 2.7rem;
   letter-spacing: 0.2rem;
 }
-
 #transP{
   transform: rotate(20deg);
   border: 2px dashed rgb(194, 184, 184);
@@ -97,7 +90,7 @@ body {
   font-size:1.4rem;
   letter-spacing: 0.3em;
   font-weight: 600;
-  text-shadow: 6px 6px 5px rgb(0, 0, 0);
+  text-shadow: 6px 6px 5px rgb(8, 8, 8);
 }
 .main>*:nth-child(4n){
   margin-top: auto;
@@ -106,27 +99,26 @@ body {
   color: white;
   font-weight: 800;
   letter-spacing: 0.3rem;
-  text-shadow: 8px 8px 5px rgb(0, 0, 0);
+  text-shadow: 8px 8px 5px rgb(10, 10, 10);
 }
-
-
 .followers {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
 }
 .followers > img {
-  width: 80px;
-  height: 80px;
-  margin: 10px 5px;
+  width: 70px;
+  height: 70px;
+  margin: 10px 3px;
   border-radius: 50%;
   border: 2px solid rgb(241, 237, 237);
 }
-
 .followers > img:last-child {
   object-fit: cover;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 0px;
 }
@@ -136,8 +128,6 @@ body {
 .followers > img:active{
   border: 2px solid yellow;
 }
-
-
 .socialNetworks {
   display: flex;
   justify-content: space-between;
